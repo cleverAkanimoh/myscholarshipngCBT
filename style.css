@@ -55,7 +55,7 @@ nav {
 #container-article {
     width: 100%;
     padding: 2rem 1rem;
-    /* color: orange; */
+    background: url(./images/)
 }
 
 #container-article h2 {
@@ -64,14 +64,14 @@ nav {
     text-align: center;
 }
 
-#container-article h4, #container-article p {
+#container-article h4 {
     font-size: 0.9rem;
     text-transform: capitalize;
     margin-bottom: 10px;
 }
 
 #container-article h4 {
-    color: #ffa500;
+    color: #ff9100;
 }
 
 #small {
@@ -90,12 +90,12 @@ nav {
     flex-direction: column;
 }
 
-#container-article #registration-form label {
-    transition: all 0.5 linear;
+#container-article #registration-form .label {
+    transition: all 0.5s linear;
     width: fit-content;
     text-transform: capitalize;
     font-size: 0.95rem;
-    translate: 15% 150%;
+    translate: 10% 120%;
     color: #000;
 }
 
@@ -126,7 +126,7 @@ nav {
     background: #ff0000;
     border-radius: 0.3rem;
     color: #fff;
-    font: 500 1.1rem 'Roboto','georgia', sans-serif;
+    font: 500 1.1rem 'Roboto', sans-serif;
 }
 
 #container-article #registration-form button:hover {
@@ -135,5 +135,4 @@ nav {
     border: 2px solid #ff0000;
     background: transparent;
     color: #ff0000;
-    font: 500 1.1rem 'Roboto','georgia', sans-serif;
 }
