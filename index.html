@@ -33,37 +33,43 @@
   <body>
     <main>
       <nav>
-        <img src="./images/scholarshipc.png" id="lodo"/>
-        <p>welcome <a href="#" id="userID-link">clever</a></p>
+        <img src="./images/scholarshipc.png" id="logo"/>
+        <p id="welcome-header">welcome <a href="#" id="userID-link">clever</a></p>
       </nav>
 
       <section id="container">
-        <article>
+        <article id="container-article">
           <h2>welcome to our <span>CBT</span> platform</h2>
-          <p id="partake">
-            To be a part of our online Test, you need to register yourself
-          </p>
-          <small>All fields with * are required</small>
+          <h4>the online test will hold on Saturday, 25/march/2022</h4>
+          <p id="partake">To be a part of our online Test, you need to register yourself</p>
+          <small id="small">all fields with * are required</small>
 
-          <form action="#" method="post" id="registration-form">
-            <div id="first-name-container">
-              <label for="firstName">First name<span>*</span></label>
+          <form action="#" id="registration-form">
+            <div id="first-name-container" class="form-div">
+              <label for="firstName" class="focused">First name<span class="required">*</span></label>
               <input type="text" id="firstName" name="firstName" />
             </div>
 
-            <div id="last-name-container">
-              <label for="lastName">Last name<span>*</span></label>
+            <div id="last-name-container" class="form-div">
+              <label for="lastName" class="focused">Last name<span class="required">*</span></label>
               <input type="text" id="lastName" name="lastName" />
             </div>
 
-            <div id="userID-container">
-              <label for="userID">userID</label>
+            <div id="userID-container" class="form-div">
+              <label for="userID" class="focused">userID</label>
               <input
                 type="text"
                 id="userID"
                 name="userID"
-                value="id1234"
                 readonly
+              />
+              </div>
+            <div id="email" class="form-div">
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                name="email"
               />
             </div>
             <button>register</button>
