@@ -15,7 +15,6 @@ main{
     width: 100vw;
     height: auto;
     background: orangered;
-    color: #fff;
 }
 
 nav {
@@ -48,6 +47,7 @@ nav {
 
 #container {
     min-width: 100%;
+    min-height: 90vh;
     display: flex;
     justify-content: center;
 }
@@ -55,7 +55,7 @@ nav {
 #container-article {
     width: 100%;
     padding: 2rem 1rem;
-    background: url(./images/)
+    background:  url(./images/images.jpeg) center/cover no-repeat;
 }
 
 #container-article h2 {
@@ -82,6 +82,9 @@ nav {
 #container-article #registration-form {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
+    background: white;
+    margin: 10px auto;
+    padding: 1rem 0;
 }
 
 #container-article #registration-form .form-div {
