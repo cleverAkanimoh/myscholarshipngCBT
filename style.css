@@ -1,6 +1,6 @@
 /* 
 preferred color: 
-secondar: red 
+secondary: red 
 primary: orange
 */
 
@@ -14,7 +14,7 @@ primary: orange
 main {
     width: 100vw;
     height: auto;
-    /* background: orangered; */
+    background: linear-gradient(100deg, #ff0000ec, #ff4400f3);
 }
 
 nav {
@@ -55,7 +55,6 @@ nav {
 #container-article {
     width: 100%;
     padding: 2rem 1rem;
-    background: url(./images/cbtshutterstock.jpeg) center/cover no-repeat;
 }
 
 #container-article h2 {
@@ -165,4 +164,14 @@ textarea {
     border-color: #ff0000;
     background: transparent;
     color: #ff0000;
+}
+
+@media screen and (min-width: 500px) {
+    nav {
+        height: 70px;
+    }
+
+    nav #logo {
+        width: 180px;
+    }
 }
