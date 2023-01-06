@@ -86,7 +86,6 @@ nav {
     margin: 10px 0;
     padding: 1rem 0.5rem;
     border-radius: 0.3rem;
-    position: relative;
 }
 
 #container-article #registration-form .form-div {
@@ -128,6 +127,10 @@ nav {
     border-left: 1px solid #444;
     background: transparent;
     color: #444;
+}
+
+#container-article #registration-form input::placeholder{
+    text-transform: capitalize;
 }
 
 #container-article #registration-form button {
