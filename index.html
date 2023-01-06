@@ -81,7 +81,7 @@
 
             <div id="userID-container" class="form-div">
               <label for="userID" class="label">userID</label>
-              <aside>
+              <aside id="userID-aside">
                 <i class="bi bi-person-vcard"></i>
                 <input type="text" id="userID" name="userID" readonly />
               </aside>
@@ -104,7 +104,7 @@
               </aside>
             </div>
 
-            <div id="country-name-container" class="form-div">
+            <div id="state-name-container" class="form-div">
               <label for="states" class="label">state of origin</label>
               <aside>
                 <i class="bi bi-flag"></i>
@@ -112,14 +112,35 @@
               </aside>
             </div>
 
-            <div id="country-name-container" class="form-div">
-              <label for="states" class="label">name of institution</label>
+            <div id="institution-name-container" class="form-div">
+              <label for="institution" class="label">name of institution</label>
               <aside>
                 <i class="bi bi-book-half"></i>
-                <input type="text" name="states" id="states" placeholder="name of institution">
+                <input type="text" name="institution" id="institution" placeholder="name of institution">
               </aside>
             </div>
 
+            <div id="level-container" class="form-div">
+              <label for="level" class="label">current level of study</label>
+              <aside>
+                <i class="bi bi-layers"></i>
+                <select name="level" id="level">
+                  <option value="select">select level</option>
+                  <option value="100">100 level</option>
+                  <option value="200">200 level</option>
+                  <option value="300">300 level</option>
+                  <option value="400">400 level</option>
+                  <option value="500">500 level</option>
+                  <option value="600">600 level</option>
+                  <option value="700">700 level</option>
+                </select>
+              </aside>
+            </div>
+
+            <div id="essay-container" class="form-div">
+              <label for="essay" class="label">*In 150 words say Why you feel you deserve this scholarship </label>
+                <textarea name="essay" id="essay" placeholder=""></textarea>
+            </div>
 
             <button><i class="bi bi-box-arrow-in-up-right"></i></button>
           </form>
