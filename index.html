@@ -27,50 +27,71 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Poppins|Roboto"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css"
+      integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
     <main>
       <nav>
-        <img src="./images/scholarshipc.png" id="logo"/>
-        <p id="welcome-header">welcome <a href="#" id="userID-link">clever</a></p>
+        <img src="./images/scholarshipc.png" id="logo" />
+        <p id="welcome-header">
+          welcome <a href="#" id="userID-link">clever</a>
+        </p>
       </nav>
 
       <section id="container">
         <article id="container-article">
           <h2>welcome to our <span>CBT</span> platform</h2>
           <h4>the online test will hold on Saturday, 25/march/2022</h4>
-          <small id="partake">To be a part of our online Test, you need to be registered</small>
+          <small id="partake"
+            >To be a part of our online Test, you need to be registered</small
+          >
 
           <form action="#" id="registration-form">
-            <div id="first-name-container" class="form-div">
-              <label for="firstName" class="label focused">First name</label>
-              <input type="text" id="firstName" name="firstName" />
-            </div>
 
             <div id="last-name-container" class="form-div">
               <label for="lastName" class="label">Last name</label>
-              <input type="text" id="lastName" name="lastName" />
+              <aside>
+                <i class="bi bi-person-add"></i>
+                <input type="text" id="lastName" name="lastName" placeholder="last name"/>
+              </aside>
+            </div>
+
+            <div id="first-name-container" class="form-div">
+              <label for="firstName" class="label">First name</label>
+              <aside>
+                <i class="bi bi-person"></i>
+                <input type="text" id="firstName" name="firstName" placeholder="first name" />
+              </aside>
+            </div>
+
+            <div id="middle-name-container" class="form-div">
+              <label for="middleName" class="label">middle name</label>
+              <aside>
+                <i class="bi bi-person-add"></i>
+                <input type="text" id="middleName" name="middleName" placeholder="middle name"/>
+              </aside>
             </div>
 
             <div id="userID-container" class="form-div">
               <label for="userID" class="label">userID</label>
-              <input
-                type="text"
-                id="userID"
-                name="userID"
-                readonly
-              />
-              </div>
+              <aside>
+                <i class="bi bi-person-vcard"></i>
+                <input type="text" id="userID" name="userID" readonly />
+              </aside>
+            </div>
             <div id="email" class="form-div">
               <label for="email" class="label">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-              />
+              <aside>
+                <i class="bi bi-envelope-at"></i>
+                <input type="email" id="email" name="email" placeholder="email address"/>
+              </aside>
             </div>
             <button><i class="bi bi-box-arrow-in-up-right"></i></button>
           </form>
