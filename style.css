@@ -14,7 +14,7 @@ primary: orange
 main{
     width: 100vw;
     height: auto;
-    background: orangered;
+    /* background: orangered; */
 }
 
 nav {
