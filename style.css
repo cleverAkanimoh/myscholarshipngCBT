@@ -117,7 +117,7 @@ nav {
     padding: 0 0.5rem;
 }
 
-#container-article #registration-form input {
+#container-article #registration-form input, #container-article #registration-form select {
     flex: 1;
     height: inherit;
     padding: 0 0.5rem;
