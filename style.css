@@ -63,11 +63,21 @@ nav {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 3rem 1.5rem 5rem;
 }
 
-#container-article {
+
+#form-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
     width: 100%;
-    padding: 3rem 1.5rem 5rem;
+    height: fit-content;
+}
+
+#form-wrapper img {
+    display: none;
 }
 
 #container-article h2 {
@@ -109,12 +119,11 @@ small {
 }
 
 #container-article #registration-form .label {
-    transition: all 0.5s linear;
     width: fit-content;
     text-transform: capitalize;
     font-size: 0.95rem;
     color: #000;
-    margin-top: 15px;
+    margin-top: 5px;
     padding: 0.2rem;
 }
 
@@ -245,7 +254,7 @@ footer ul li a:hover {
 @media screen and (min-width: 600px) {
     #container-article #registration-form {
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px 15px;
+        gap: 5px 15px;
     }
 
     .span-two {
@@ -255,7 +264,6 @@ footer ul li a:hover {
 
 @media screen and (min-width: 800px) {
     #container-article #registration-form {
-        position: relative;
         width: 600px;
         padding: 2rem;
         z-index: 1;
@@ -263,13 +271,21 @@ footer ul li a:hover {
 }
 
 @media screen and (min-width: 1000px) {
-    #container-article #registration-form::before {
-        content: url(./images/3-students-on-campus.jpg);
+    #container-article {
+        padding: 3rem 0 10rem;
+    }
+
+    #form-wrapper img {
         position: absolute;
-        z-index: -1;
+        display: inline;
+        width: 200px;
+        height: 200px;
         top: 0;
-        left: -50%;
-        height: 400px;
-        width: 500px;
+        left: 0;
+        border-radius: 50rem;
+    }
+    
+    #container-article #registration-form {
+        translate: 60% 0;
     }
 }
