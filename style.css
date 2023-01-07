@@ -84,7 +84,6 @@ small {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
     background: white;
-    margin: 10px 0;
     padding: 1rem 0.5rem;
     border-radius: 0.3rem;
     box-shadow: 3px -3px 2px #00000043, -3px 3px 2px #00000043;
@@ -219,4 +218,24 @@ footer ul li a:hover {
     nav #logo {
         width: 200px;
     }
+}
+
+@media screen and (min-width: 600px) {
+    #container-article #registration-form {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px 15px;
+    }
+
+    .span-two {
+        grid-column: 1/-1;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    #container-article #registration-form {
+        width: 700px;
+        padding: 2rem;
+    }
+
+    #container-article {}
 }
