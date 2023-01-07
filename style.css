@@ -11,6 +11,10 @@ primary: orange
     font-family: 'Poppins', sans-serif;
 }
 
+button, select {
+    cursor: pointer;
+}
+
 main {
     width: 100vw;
     height: auto;
@@ -50,6 +54,15 @@ nav {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+}
+
+#container-article {
+    width: 100%;
+    border: 1px solid red;
+    padding: 3rem 0 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #container-article {
@@ -162,6 +175,8 @@ textarea {
     border-radius: 50rem;
     color: #fff;
     font: 500 1.1rem 'Roboto', sans-serif;
+    cursor: pointer;
+    transition: all 0.5s;
 }
 
 #container-article #registration-form button:hover {
@@ -200,14 +215,15 @@ footer ul li {
     list-style: none;
 }
 
-footer ul li a {
+footer ul li a:link, footer ul li a:visited {
     color: #cacaca;
     font: 500 0.89rem "Roboto", sans-serif;
     text-decoration: none;
 }
 
 footer ul li a:hover {
-    text-decoration: dotted;
+    text-decoration: dotted !important;
+    color: #ff0000;
 }
 
 @media screen and (min-width: 500px) {
@@ -237,5 +253,5 @@ footer ul li a:hover {
         padding: 2rem;
     }
 
-    #container-article {}
+    
 }
