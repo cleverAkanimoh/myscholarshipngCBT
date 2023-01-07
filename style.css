@@ -71,6 +71,7 @@ nav {
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
     overflow-x: hidden;
     width: 100%;
     height: fit-content;
