@@ -258,7 +258,7 @@ footer ul li a:hover {
         position: relative;
         width: 600px;
         padding: 2rem;
-        /* z-index: 1; */
+        z-index: 1;
     }
 }
 
