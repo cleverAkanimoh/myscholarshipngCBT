@@ -188,6 +188,7 @@ footer {
     padding: 2rem;
     display: flex;
     flex-direction: column-reverse;
+    gap: 30px;
 }
 
 footer img {
@@ -197,6 +198,17 @@ footer img {
 footer ul li {
     display: inline-block;
     padding: 0.5rem 0.8rem;
+    
+}
+
+footer ul li a {
+    color: #cacaca;
+    font: 500 0.89rem "Roboto", sans-serif;
+    text-decoration: none;
+}
+
+footer ul li a:hover {
+    text-decoration: dotted;
 }
 
 @media screen and (min-width: 500px) {
