@@ -236,6 +236,10 @@ footer ul li a:hover {
     nav #logo {
         width: 200px;
     }
+
+    #container-article #registration-form {
+        padding: 1.5rem;
+    }
 }
 
 @media screen and (min-width: 600px) {
@@ -251,7 +255,21 @@ footer ul li a:hover {
 
 @media screen and (min-width: 800px) {
     #container-article #registration-form {
+        position: relative;
         width: 600px;
         padding: 2rem;
+        /* z-index: 1; */
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    #container-article #registration-form::before {
+        content: url(./images/3-students-on-campus.jpg);
+        position: absolute;
+        /* z-index: -1; */
+        top: 0;
+        left: -50%;
+        height: 400px;
+        width: 500px;
     }
 }
