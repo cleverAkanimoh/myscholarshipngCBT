@@ -87,7 +87,7 @@ nav {
     margin: 10px 0;
     padding: 1rem 0.5rem;
     border-radius: 0.3rem;
-    box-shadow: 3px -3px 2px #05050533, -3px 3px 2px #0000003b;
+    box-shadow: 3px -3px 2px #00000043, -3px 3px 2px #00000043;
 }
 
 #container-article #registration-form .form-div {
@@ -153,7 +153,9 @@ textarea {
 }
 
 #container-article #registration-form button {
+    position: relative;
     margin-top: 20px;
+    margin-bottom: 50px;
     height: 50px;
     width: 50px;
     border: 2px solid transparent;
@@ -167,6 +169,15 @@ textarea {
     border-color: #ff0000;
     background: transparent;
     color: #ff0000;
+}
+#container-article #registration-form button::after {
+    content: 'click here to submit';
+    width: 200px;
+    position: absolute;
+    color: #000;
+    top: 50%;
+    left: 50%;
+    translate: 0% -50%;
 }
 
 @media screen and (min-width: 500px) {
