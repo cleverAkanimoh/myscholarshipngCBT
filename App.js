@@ -3,6 +3,7 @@ import Weekdays from "./modules/Weekdays.js";
 import NavFixed from "./modules/NavFixed.js";
 import HandleSubmit from "./modules/HandleSubmit.js";
 import WordCount from "./modules/WordCount.js";
+import CreateUserID from "./modules/CreateUserID.js";
 
 const logos = document.querySelectorAll('.logo');
 const textarea = document.getElementById('essay');
@@ -13,8 +14,8 @@ function modulesLoad(){
     // window.onscroll = NavFixed;
     registrationForm.onsubmit = HandleSubmit;
     textarea.oninput = WordCount;
+    firstName.oninput = CreateUserID;
     Countries.forEach(country => {
-        console.log(country.name);
         const countrySelect = document.getElementById('country');
         countrySelect.innerHTML = `<option value="select">select nationality</option>
         <option value="${country.name}">${country.name}</option>`

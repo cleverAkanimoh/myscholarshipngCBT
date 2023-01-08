@@ -9,5 +9,5 @@ export default function(e) {
             e.preventDefault();
             displayAlert('please ensure all input fields are filled')
         }
-    })
+    });
 }
