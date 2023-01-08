@@ -282,6 +282,7 @@ footer ul li a:hover {
 
     #form-wrapper {
         animation: changeBg 5s infinite;
+        padding: 5rem 0;
     }
 }
 
