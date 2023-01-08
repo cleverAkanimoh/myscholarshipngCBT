@@ -43,6 +43,9 @@ select,
 main {
     width: 100vw;
     height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background: linear-gradient(100deg, #ff0000f3, #ff4400f1);
 }
 
@@ -72,6 +75,24 @@ nav {
 
 #userID-link:hover {
     text-decoration: dotted;
+}
+
+.alert {
+    width: 90%;
+    position: fixed;
+    top: 11%;
+    z-index: 200;
+}
+
+.alert-display {
+    display: grid;
+    place-items: center;
+    padding: 1rem 0.5rem;
+    background: #f9f9f9;
+    border: 1px solid #ff0000;
+    color: #ff0000;
+    font-weight: bold;
+    border-radius: 0.3rem;
 }
 
 #container {
