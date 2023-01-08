@@ -1,5 +1,9 @@
 let uniqueNumber = Date.now()
 
 export default function(){
-    userID.value = firstName.value + uniqueNumber
+    let randomNumber = Math.floor(Math.random() * 10)
+    if (firstName.value === ""){
+        userID.value = '';
+    }
+    userID.value = `${firstName.value}-${randomNumber}${uniqueNumber}`
 }

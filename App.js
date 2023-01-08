@@ -10,6 +10,9 @@ const textarea = document.getElementById('essay');
 const registrationForm = document.getElementById('registration-form')
 const holding = document.getElementById('holding')
 
+// logo refresh event
+logos.forEach(logo => logo.onclick = () => window.location.reload())
+
 function modulesLoad(){
     // window.onscroll = NavFixed;
     registrationForm.onsubmit = HandleSubmit;
@@ -22,11 +25,5 @@ function modulesLoad(){
     });
 }
 window.addEventListener('DOMContentLoaded', modulesLoad)
-
-// logo refresh event
-logos.forEach(logo => logo.onclick = () => window.location.reload())
-
-// nationality select
-
 
 // countdown
