@@ -81,7 +81,9 @@ nav {
     width: 90%;
     position: fixed;
     top: 11%;
-    z-index: 200;
+    translate: 0 -100%;
+    z-index: -200;
+    transition: all 0.3s linear;
 }
 
 .alert-display {
@@ -89,10 +91,11 @@ nav {
     place-items: center;
     padding: 1rem 0.5rem;
     background: #f9f9f9;
-    border: 1px solid #ff0000;
     color: #ff0000;
     font-weight: bold;
     border-radius: 0.3rem;
+    z-index: 200;
+    translate: 0;
 }
 
 #container {
@@ -298,6 +301,9 @@ footer ul li a:hover {
 }
 
 @media screen and (min-width: 600px) {
+    .alert {
+        width: 550px;
+    }
     #container-article #registration-form {
         grid-template-columns: repeat(2, 1fr);
         gap: 5px 15px;

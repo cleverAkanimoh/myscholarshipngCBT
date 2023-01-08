@@ -1,4 +1,12 @@
 const logos = document.querySelectorAll('.logo');
+const alert = document.querySelector('.alert');
+
+function displayAlert(txt) {
+    alert.textContent = txt;
+    setTimeout(() => {
+        alert.classList.add("alert-display")
+    })
+}
 
 // logo refresh event
 logos.forEach(logo => logo.onclick = () =>  window.location.reload())
@@ -13,7 +21,7 @@ function HandleSumbit(e) {
 inputFields.forEach(field => {
     if (field.value === "") {
         e.preventDefault();
-        alert()
+        displayAlert('please ensure all input fields are filled')
     }
 })
 }
