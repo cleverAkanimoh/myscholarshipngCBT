@@ -111,7 +111,7 @@ nav.nav-fixed {
 #count {
     padding: 0.4rem 0.1rem;
     text-transform: capitalize;
-    font: 500 1rem "georgia", "Helvetica Neue", Helvetica, Arial;
+    font: 500 0.8rem "georgia", "Helvetica Neue", Helvetica, Arial;
 }
 
 #container {
