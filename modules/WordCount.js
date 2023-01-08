@@ -2,7 +2,7 @@ const textarea = document.getElementById('essay');
 const wordCountDisplay = document.getElementById('count');
 const hearAbout = document.getElementById('information');
 
-export default function WordCount() {
+export default function() {
     let textareaValue = textarea.value.trim().split(" ");
     let wordLength = textareaValue.length;
     let wordLengthDiff = 150 - textareaValue.length;

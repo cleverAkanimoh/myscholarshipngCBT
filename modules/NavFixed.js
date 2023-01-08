@@ -1,6 +1,6 @@
 const nav = document.querySelector('nav');
 
-export default function NavFixed() {
+export default function() {
     const scrollHeight = nav.getBoundingClientRect().top
 
     if (scrollHeight === 0) {
