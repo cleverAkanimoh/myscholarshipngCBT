@@ -91,6 +91,7 @@ nav.nav-fixed {
     top: 11%;
     translate: 0 -100%;
     z-index: -200;
+    text-transform: capitalize;
     transition: all 0.3s linear;
 }
 
@@ -109,6 +110,7 @@ nav.nav-fixed {
 
 #count {
     padding: 0.4rem 0.1rem;
+    text-transform: capitalize;
     font: 500 1rem "georgia", "Helvetica Neue", Helvetica, Arial;
 }
 

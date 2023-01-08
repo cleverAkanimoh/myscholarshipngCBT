@@ -15,7 +15,7 @@ function NavFixed() {
         nav.classList.add("nav-fixed")
     }
 }
-window.onscroll = NavFixed;
+// window.onscroll = NavFixed;
 
 function displayAlert(txt) {
     alert.textContent = txt;
