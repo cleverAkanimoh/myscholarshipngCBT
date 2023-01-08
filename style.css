@@ -35,7 +35,8 @@ primary: orange
 }
 
 button,
-select {
+select,
+.logo {
     cursor: pointer;
 }
 
@@ -61,10 +62,6 @@ nav {
 
 #logo {
     width: 150px;
-}
-
-.logo {
-    cursor: pointer;
 }
 
 #userID-link {
@@ -127,7 +124,7 @@ small {
 
 #container-article #registration-form {
     position: relative;
-    display: none;
+    display: grid;
     grid-template-columns: repeat(1, 1fr);
     background: white;
     padding: 1rem 0.5rem;
