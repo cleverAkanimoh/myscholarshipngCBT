@@ -1,9 +1,12 @@
+import Countries from "./modules/Countries.js";
+
 const logos = document.querySelectorAll('.logo');
 const alert = document.querySelector('.alert');
 const nav = document.querySelector('nav');
 const textarea = document.getElementById('essay');
 const wordCountDisplay = document.getElementById('count');
 const hearAbout = document.getElementById('information');
+
 
 function NavFixed() {
     const height = nav.clientHeight;
@@ -45,21 +48,29 @@ function HandleSumbit(e) {
 }
 registrationForm.onsubmit = HandleSumbit;
 
+// nationality select
+
+Countries.forEach(country => {
+    console.log(country.name);
+    const countrySelect = document.getElementById('country');
+    return (
+        countrySelect.innerHTML = `<option value="select">select nationality</option>
+    <option value="${country.name}">${country.name}</option>`
+    )
+});
+
 function WordCount() {
     let textareaValue = textarea.value.trim().split(" ");
     let wordLength = textareaValue.length;
     let wordLengthDiff = 150 - textareaValue.length;
-    wordCountDisplay.innerHTML = `you have ${wordLengthDiff} ${wordLength === 1 ? 'word' : "words"} left`;
+    wordCountDisplay.textContent = `you have ${wordLengthDiff} words left`;
+    wordCountDisplay.style.color = '#000'
     if (wordLengthDiff === 0) {
-        textarea.disabled = true;
         hearAbout.focus();
     } else if (wordLength < 10) {
         textarea.focus()
-        wordCountDisplay.textContent = 'Please enter atleast 10 words';
-    } else if (textareaValue[0] == "") {
-        wordCountDisplay.textContent = "";
-        wordLength = 0;
+        wordCountDisplay.textContent = `Please enter atleast 10 words, you have entered only ${wordLength} ${wordLength === 1 ? 'word' : "words"}`;
+        wordCountDisplay.style.color = 'red'
     }
-    console.log(textareaValue[0]);
 }
 textarea.oninput = WordCount;
