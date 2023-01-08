@@ -13,19 +13,19 @@ primary: orange
 
 @keyframes changeBg {
     0% {
-        background: linear-gradient(to bottom, #000, #ff0000), url(./images/3-students-on-campus.jpg) center/cover no-repeat;
+        background: url(./images/3-students-on-campus.jpg) center/cover no-repeat;
     }
     25% {
-        background: linear-gradient(to bottom, #000, #ff0000), url(./images/Foreign-Students.jpg) center/cover no-repeat;
+        background: url(./images/Foreign-Students.jpg) center/cover no-repeat;
     }
     50% {
-        background: linear-gradient(to bottom, #000, #ff0000), url(./images/education.jpeg) center/cover no-repeat;
+        background: url(./images/education.jpeg) center/cover no-repeat;
     }
     75% {
-        background: linear-gradient(to bottom, #000, #ff0000), url(./images/school-sketch.jpeg) center/cover no-repeat;
+        background: url(./images/school-sketch.jpeg) center/cover no-repeat;
     }
     100% {
-        background: linear-gradient(to bottom, #000, #ff0000), url(./images/cbtshutterstock.jpeg) center/cover no-repeat;
+        background: url(./images/cbtshutterstock.jpeg) center/cover no-repeat;
     }
 
 }
@@ -279,6 +279,10 @@ footer ul li a:hover {
     .span-two {
         grid-column: 1/-1;
     }
+
+    #form-wrapper {
+        animation: changeBg 5s infinite;
+    }
 }
 
 @media screen and (min-width: 800px) {
@@ -290,7 +294,5 @@ footer ul li a:hover {
 }
 
 @media screen and (min-width: 1000px) {
-    #container-article {
-        padding: 3rem 0 10rem;
-    }
+    
 }
