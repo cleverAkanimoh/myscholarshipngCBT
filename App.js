@@ -5,7 +5,7 @@ function displayAlert(txt) {
     alert.textContent = txt;
     setTimeout(() => {
         alert.classList.add("alert-display")
-    })
+    }, 5000)
 }
 
 // logo refresh event
