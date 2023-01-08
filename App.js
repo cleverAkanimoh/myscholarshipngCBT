@@ -2,6 +2,7 @@ import Countries from "./modules/Countries.js";
 // import Weekdays from "./modules/Weekdays.js";
 // import NavFixed from "./modules/NavFixed.js";
 import HandleSumbit from "./modules/HandleSubmit.js";
+import WordCount from "./modules/WordCount.js";
 
 const logos = document.querySelectorAll('.logo');
 
@@ -26,7 +27,7 @@ Countries.forEach(country => {
 });
 
 // textarea
-
+const textarea = document.getElementById('essay');
 textarea.oninput = WordCount;
 
 // countdown

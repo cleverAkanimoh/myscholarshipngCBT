@@ -1,5 +1,4 @@
-import displayAlert from "./DisplayAlert";
-
+import displayAlert from "./DisplayAlert.js";
 
 const inputFields = document.querySelectorAll('.form-div input')
 console.log(inputFields);
