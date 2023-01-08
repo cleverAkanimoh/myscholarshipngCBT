@@ -15,15 +15,19 @@ primary: orange
     0% {
         background: url(./images/3-students-on-campus.jpg) center/cover no-repeat;
     }
+
     25% {
         background: url(./images/Foreign-Students.jpg) center/cover no-repeat;
     }
+
     50% {
         background: url(./images/education.jpeg) center/cover no-repeat;
     }
+
     75% {
         background: url(./images/school-sketch.jpeg) center/cover no-repeat;
     }
+
     100% {
         background: url(./images/cbtshutterstock.jpeg) center/cover no-repeat;
     }
@@ -38,7 +42,7 @@ select {
 main {
     width: 100vw;
     height: auto;
-    background: linear-gradient(100deg, #ff0000ec, #ff4400f3);
+    background: linear-gradient(100deg, #ff0000f3, #ff4400f1);
 }
 
 nav {
@@ -57,6 +61,10 @@ nav {
 
 #logo {
     width: 150px;
+}
+
+.logo {
+    cursor: pointer;
 }
 
 #userID-link {
@@ -78,7 +86,6 @@ nav {
 
 #container-article {
     width: 100%;
-    border: 1px solid red;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -93,10 +100,6 @@ nav {
     overflow-x: hidden;
     width: 100%;
     height: fit-content;
-}
-
-#form-wrapper img {
-    display: none;
 }
 
 #container-article h2 {
@@ -236,13 +239,13 @@ footer {
 }
 
 footer p {
-text-transform: capitalize;
-font-weight: 600;
+    text-transform: capitalize;
+    font-weight: 600;
+    color: #f10a0a;
 }
 
 footer img {
     width: 300px;
-    cursor: pointer;
 }
 
 footer ul li {
@@ -300,6 +303,4 @@ footer ul li a:hover {
     }
 }
 
-@media screen and (min-width: 1000px) {
-    
-}
+@media screen and (min-width: 1000px) {}
