@@ -9,6 +9,7 @@ import CreateUserID from "./modules/CreateUserID.js";
 const logos = document.querySelectorAll('.logo');
 const textarea = document.getElementById('essay');
 const registrationForm = document.getElementById('registration-form');
+const articleContainer = document.getElementById('container-article');
 
 
 // logo refresh event
@@ -30,7 +31,7 @@ window.addEventListener('DOMContentLoaded', modulesLoad)
 
 // countdown
 
-let d = new Date(2023, 1, 11, 14, 0);
+let d = new Date(2023, 0, 11, 11, 7);
 const year = d.getFullYear();
 const month = d.getMonth();
 const day = d.getDay();
@@ -38,7 +39,7 @@ const date = d.getDate();
 const hour = d.getHours();
 const min = d.getMinutes();
 
-holding.textContent = `the scholarship test will hold on ${Weekdays[day]}, ${date} ${Months[month]} ${year}, ${hour}:${min}${min > 9 ? "" : "0"}`;
+holding.textContent = `the scholarship test will hold on ${Weekdays[day]}, ${date} ${Months[month]} ${year}, ${hour > 9 ? "" : "0"}${hour}:${min > 9 ? "" : "0"}${min}`;
 
 // future time in milliseconds
 
@@ -65,10 +66,35 @@ function getRemainingTime() {
 
     // display values in countdown timer
 
-    countdown.textContent = `the scholarship test ends in ${daysLeft > 9 ? daysLeft : '0' + daysLeft}${daysLeft ? 'days' : "day"} ${hoursLeft > 9 ? hoursLeft : '0' + hoursLeft}${hoursLeft ? 'hours' : "hour"} ${minutesLeft > 9 ? minutesLeft : '0' + minutesLeft}${minutesLeft ? 'minutes' : "minute"} and ${secondsLeft > 9 ? secondsLeft : '0' + secondsLeft} ${secondsLeft ? 'seconds' : "second"}`;
+    countdown.textContent = `registration for the scholarship test ends in ${daysLeft > 9 ? daysLeft : '0' + daysLeft}${daysLeft ? 'days' : "day"} ${hoursLeft > 9 ? hoursLeft : '0' + hoursLeft}${hoursLeft ? 'hours' : "hour"} ${minutesLeft > 9 ? minutesLeft : '0' + minutesLeft}${minutesLeft ? 'minutes' : "minute"} and ${secondsLeft > 9 ? secondsLeft : '0' + secondsLeft} ${secondsLeft ? 'seconds' : "second"}`;
 
     if (timeDiffBtweenNowAndFuture < 0) {
-        clearInterval(interval);
-        countdown.textContent = `the scholarship test registration ended on ${Weekdays[day]}, ${date} ${Months[month]} ${year}, ${hour}:${min}${min > 9 ? "" : "0"}`;
+        testStart()
     }
 };
+
+function testStart() {  
+    const loginFormHtml = `
+                <!-- login form -->
+    <h2>welcome to our <span>CBT</span> platform</h2>
+    <h4 id="holding"></h4>
+
+    <form action="#" id="login-form">
+    <div class="form-div" class="span-two">
+    <label for="userID" class="label">userID</label>
+    <aside id="userID-aside">
+        <i class="bi bi-person-vcard"></i>
+        <input type="text" id="userID" name="login_userID" />
+    </aside>
+    </div>
+
+    <button class="span-two">
+        <i class="bi bi-box-arrow-in-up-right"></i>
+  </button>
+    </form>`;
+
+    clearInterval(interval);
+    holding.textContent = 'please enter your userID to start your test'
+    articleContainer.innerHTML = loginFormHtml;
+    countdown.textContent = `the scholarship test registration ended on ${Weekdays[day]}, ${date} ${Months[month]} ${year}, ${hour}:${min}${min > 9 ? "" : "0"}`;
+}

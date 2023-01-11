@@ -123,6 +123,7 @@ nav.nav-fixed {
 
 #container-article {
     width: 100%;
+    min-height: 50vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -161,9 +162,10 @@ small {
     margin-bottom: 20px;
 }
 
-#container-article #registration-form {
+#container-article #registration-form,
+#login-form {
     position: relative;
-    display: none;
+    display: grid;
     grid-template-columns: repeat(1, 1fr);
     background: white;
     padding: 1rem 0.5rem;
@@ -171,13 +173,24 @@ small {
     box-shadow: 3px -3px 2px #00000043, -3px 3px 2px #00000043;
 }
 
-#container-article #registration-form .form-div {
+#login-form {
+    margin: 20px 0 0;
+}
+
+legend {
+    text-transform: capitalize;
+    font: 600 1rem 'Poppins', sans-serif;
+    color: #ff2200;
+}
+
+#container-article #registration-form .form-div,
+#login-form .form-div {
     width: 100%;
     display: flex;
     flex-direction: column;
 }
 
-#container-article #registration-form .label {
+#container-article #registration-form .label, #login-form .label {
     width: fit-content;
     text-transform: capitalize;
     font-size: 0.95rem;
@@ -186,7 +199,7 @@ small {
     padding: 0.2rem;
 }
 
-#container-article #registration-form aside {
+#container-article #registration-form aside, #login-form aside {
     display: flex;
     align-items: center;
     width: 100%;
@@ -195,7 +208,7 @@ small {
     border-radius: 0.3rem;
 }
 
-#container-article #registration-form aside .bi {
+#container-article #registration-form aside .bi, #login-form .bi {
     padding: 0 0.5rem;
     height: inherit;
     border-radius: 0.3rem 0 0 0.3rem;
@@ -204,7 +217,7 @@ small {
 }
 
 #container-article #registration-form input,
-#container-article #registration-form select {
+#container-article #registration-form select, #login-form input {
     flex: 1;
     height: inherit;
     padding: 0 0.5rem;
@@ -232,14 +245,15 @@ textarea {
     color: #444;
 }
 
-#container-article #registration-form button {
+#container-article #registration-form button,
+#login-form button {
     position: relative;
     margin-top: 20px;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
     height: 50px;
     width: 50px;
     border: 2px solid transparent;
-    background: #ff0000;
+    background: #ff2200;
     border-radius: 50rem;
     color: #fff;
     font: 500 1.1rem 'Roboto', sans-serif;
@@ -247,10 +261,11 @@ textarea {
     transition: all 0.5s;
 }
 
-#container-article #registration-form button:hover {
-    border-color: #ff0000;
+#container-article #registration-form button:hover,
+#login-form button:hover {
+    border-color: #ff2200;
     background: transparent;
-    color: #ff0000;
+    color: #ff2200;
 }
 
 #container-article #registration-form button::after {
@@ -276,12 +291,12 @@ footer {
 
 footer p {
     text-transform: capitalize;
-    font-weight: 600;
     color: #f10a0a;
+    font: 500 0.9rem '';
 }
 
 footer img {
-    width: 300px;
+    width: 200px;
 }
 
 footer ul li {
@@ -319,6 +334,7 @@ footer ul li a:hover {
     .alert {
         width: 550px;
     }
+
     #container-article #registration-form {
         grid-template-columns: repeat(2, 1fr);
         gap: 5px 15px;
