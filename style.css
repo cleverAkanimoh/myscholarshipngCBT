@@ -174,12 +174,8 @@ small {
 
 #login-form {
     margin-top: 20px;
-}
-
-legend {
-    text-transform: capitalize;
-    font: 600 1rem 'Poppins', sans-serif;
-    color: #ff2200;
+    display: flex;
+    gap: 15px;
 }
 
 #container-article #registration-form .form-div,
@@ -329,7 +325,7 @@ footer ul li a:hover {
         width: 200px;
     }
 
-    #container-article #registration-form {
+    #container-article #registration-form, #login-form {
         padding: 1.5rem;
     }
 }
@@ -339,9 +335,13 @@ footer ul li a:hover {
         width: 550px;
     }
 
-    #container-article #registration-form {
+    #container-article #registration-form{
         grid-template-columns: repeat(2, 1fr);
         gap: 5px 15px;
+    }
+
+    #login-form {
+        width: 500px;
     }
 
     .span-two {
@@ -358,6 +358,7 @@ footer ul li a:hover {
     nav {
         padding: 0 5rem;
     }
+
     #container-article #registration-form {
         width: 600px;
         padding: 1.5rem;

@@ -93,22 +93,21 @@ function testStart() {
     <label for="userID" class="label">userID</label>
     <aside id="userID-aside">
         <i class="bi bi-person-vcard"></i>
-        <input type="text" id="userID" name="login_userID" />
+        <input type="text" id="userID" name="login_userID" placeholder="Enter userID Here..." />
     </aside>
     </div>
 
-    <button class="span-two">
+    <button class="loginBtn span-two">
         <i class="bi bi-box-arrow-in-up-right"></i>
   </button>
     </form>`;
     
-
     clearInterval(interval);
-    holding.textContent = 'please enter your userID to start your test'
     articleContainer.innerHTML = loginFormHtml;
     countdown.textContent = `the scholarship test registration ended on ${Weekdays[day]}, ${date} ${Months[month]} ${year}, ${hour}:${min}${min > 9 ? "" : "0"}`;
-    let loginHandler = document.getElementById('login-form');
-    loginHandler.onsubmit = loginHandleSubmit;
+    const loginForm = document.getElementById('login-form');
+    loginForm.onsubmit = loginHandleSubmit;
+    holding.textContent = 'please enter your userID to start your test';
 }
 
 function loginHandleSubmit(e) {
