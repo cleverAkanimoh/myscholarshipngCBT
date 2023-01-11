@@ -40,7 +40,7 @@ function NationalityDrop() {
 
 // countdown
 
-let d = new Date(2023, 1, 11, 11, 7);
+let d = new Date(2023, 0, 11, 11, 7);
 const year = d.getFullYear();
 const month = d.getMonth();
 const day = d.getDay();
@@ -82,7 +82,7 @@ function getRemainingTime() {
     }
 };
 
-function testStart() {  
+function testStart() {
     const loginFormHtml = `
                 <!-- login form -->
     <h2>welcome to our <span>CBT</span> platform</h2>
@@ -101,9 +101,17 @@ function testStart() {
         <i class="bi bi-box-arrow-in-up-right"></i>
   </button>
     </form>`;
+    
 
     clearInterval(interval);
     holding.textContent = 'please enter your userID to start your test'
     articleContainer.innerHTML = loginFormHtml;
     countdown.textContent = `the scholarship test registration ended on ${Weekdays[day]}, ${date} ${Months[month]} ${year}, ${hour}:${min}${min > 9 ? "" : "0"}`;
+    let loginHandler = document.getElementById('login-form');
+    loginHandler.onsubmit = loginHandleSubmit;
+}
+
+function loginHandleSubmit(e) {
+    e.preventDefault();
+    console.log('working well');
 }
