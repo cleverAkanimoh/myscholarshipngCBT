@@ -21,17 +21,26 @@ function modulesLoad() {
     textarea.oninput = WordCount;
     firstName.oninput = CreateUserID;
     getRemainingTime();
-    Countries.forEach(country => {
-        const countrySelect = document.getElementById('country');
-        countrySelect.innerHTML = `<option value="select">select nationality</option>
-        <option value="${country.name}">${country.name}</option>`
-    });
+    NationalityDrop()
 }
-window.addEventListener('DOMContentLoaded', modulesLoad)
+window.addEventListener('DOMContentLoaded', modulesLoad, false);
+
+// nationality
+
+function NationalityDrop() {
+    let countrySelect = document.getElementById('country');
+    let optionsEl = document.createElement('option');
+    Countries.forEach(country => {
+        optionsEl.value = `${country.name}`;
+        optionsEl.textContent = `${country.name}`;
+    });
+    countrySelect.appendChild(optionsEl)
+    console.log(country);
+}
 
 // countdown
 
-let d = new Date(2023, 0, 11, 11, 7);
+let d = new Date(2023, 1, 11, 11, 7);
 const year = d.getFullYear();
 const month = d.getMonth();
 const day = d.getDay();

@@ -101,7 +101,7 @@ nav.nav-fixed {
     padding: 0.7rem;
     background: #fff;
     color: #ff0000;
-    font-weight: 500;
+    font: 500 0.9rem 'Poppins', sans-serif;
     border: 1px solid #ff0000;
     border-radius: 0.3rem;
     z-index: 200;
