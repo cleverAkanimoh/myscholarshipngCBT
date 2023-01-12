@@ -1,7 +1,7 @@
 import Countries from "./modules/Countries.js";
 import Weekdays from "./modules/Weekdays.js";
 import Months from "./modules/Months.js";
-import NavFixed from "./modules/NavFixed.js";
+// import NavFixed from "./modules/NavFixed.js";
 import HandleSubmit from "./modules/HandleSubmit.js";
 import WordCount from "./modules/WordCount.js";
 import CreateUserID from "./modules/CreateUserID.js";
@@ -36,12 +36,11 @@ function NationalityDrop() {
         optionsEl.textContent = `${country.name}`;
     });
     countrySelect.appendChild(optionsEl)
-    console.log(country);
 }
 
 // countdown
 
-let d = new Date(2023, 0, 11, 11, 7);
+let d = new Date(2023, 0, 12, 21, 0);
 const year = d.getFullYear();
 const month = d.getMonth();
 const day = d.getDay();
@@ -104,6 +103,7 @@ function testStart() {
     </form>`;
 
     clearInterval(interval);
+    articleContainer.style.marginTop = "0px"
     articleContainer.innerHTML = loginFormHtml;
     countdown.textContent = `the scholarship test registration ended on ${Weekdays[day]}, ${date} ${Months[month]} ${year}, ${hour}:${min > 9 ? "" : "0"}${min}`;
     const loginForm = document.getElementById('login-form');
