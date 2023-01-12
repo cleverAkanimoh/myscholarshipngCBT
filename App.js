@@ -253,12 +253,12 @@ function quizSection(data) {
                 choices.classList.add('active');
         
                 // check answer
-                if (choiceNo === MCQs[index].answer){
+                if (choiceNo === data[index].answer){
                     correct++;
                 }else {
-                    correct+=0
+                    correct += 0
                 }
-                clearInterval(interval)
+                clearInterval(timeInterval)
         
                 // disable other options
         
@@ -273,7 +273,6 @@ function quizSection(data) {
         next_question.onclick = moveToNextQuestion;
 
         function moveToNextQuestion() {
-            console.log(index, choice_que, data.length);
             if (index !== data.length - 1) {
                 index++;
                 choice_que.forEach(remActive => {
