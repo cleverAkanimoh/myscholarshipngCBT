@@ -5,6 +5,7 @@ import NavFixed from "./modules/NavFixed.js";
 import HandleSubmit from "./modules/HandleSubmit.js";
 import WordCount from "./modules/WordCount.js";
 import CreateUserID from "./modules/CreateUserID.js";
+import displayAlert from "./modules/DisplayAlert.js";
 
 const logos = document.querySelectorAll('.logo');
 const textarea = document.getElementById('essay');
@@ -93,7 +94,7 @@ function testStart() {
     <label for="userID" class="label">userID</label>
     <aside id="userID-aside">
         <i class="bi bi-person-vcard"></i>
-        <input type="text" id="userID" name="login_userID" placeholder="Enter userID Here..." />
+        <input type="text" id="login_userID" name="login_userID" placeholder="Enter userID Here..." />
     </aside>
     </div>
 
@@ -113,7 +114,14 @@ function testStart() {
 function loginHandleSubmit(e) {
     e.preventDefault();
     let loginBtn = document.querySelector(".loginBtn")
+    let loginUserID = document.getElementById("login_userID")
     loginBtn.innerHTML = `<div class="loading"></div>`;
+
+    if (loginUserID.value === "") {
+        displayAlert("userID field is empty")
+        loginBtn.innerHTML = `<i class="bi bi-box-arrow-in-up-right"></i>`;
+        return null;
+    }
 
     setTimeout(() => {
         fetch("./server/questions.json")
@@ -137,12 +145,13 @@ function quizSection(data) {
             <button id="exit">Exit</button>
             <button id="continue">Continue</button>
         </div>
-    </div>`;
+    </div>
+    `;
 
     const quizHtml = `
     <div id="quiz">
     <div id="quiz_header">
-        <h5>amazing quiz app</h5>
+        <h5></h5>
         <div id="timer">
             <h6>Time left</h6>
             <h6 id="time">20</h6>
@@ -177,5 +186,15 @@ function quizSection(data) {
 </div>
     `;
 
+    // after authentication guide page will show
+
     articleContainer.innerHTML = guideHtml;
+    let continueBtn = document.getElementById("continue")
+    let exitBtn = document.getElementById("exit")
+    console.log(continueBtn, exitBtn);
+    exitBtn.onclick = () => window.location.reload()
+
+    continueBtn.onclick = () => {
+        articleContainer.innerHTML = quizHtml;
+    }
 }

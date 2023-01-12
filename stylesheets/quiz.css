@@ -61,53 +61,18 @@ Global Styles
 	word-break: break-word;
 	letter-spacing: var(--spacing);
 }
-body {
-	font-family: var(--ff-secondary);
-	background: var(--clr-grey-9);
-	color: var(--clr-primary-1);
-	font-size: 0.88rem;
-	display: grid;
-	place-items: center;
-	height: 100vh;
-	overflow-y: auto;
-	text-transform: capitalize;
-}
-
-#container {
-	height: auto;
-	width: auto;
-}
-
-#start {
-	height: 60px;
-	width: 250px;
-	text-align: center;
-	padding: 20px 0;
-	background: #e7f1fa;
-	font-weight: 700;
-	border-radius: 30px 10px;
-	border: 2px solid #b0c4d8;
-	cursor: pointer;
-}
-
-#start:hover {
-	background: #ff5235;
-	color: #e7f1fa;
-}
 
 #guide,
 #quiz {
-	display: none;
 	height: auto;
 	width: 310px;
 	padding: 10px;
 	background: #e7f1fa;
-	border-radius: 30px 10px;
-	border: 1px solid #b0c4d8;
+	border-radius:10px;
 }
 
 #guide h2 {
-	color: #ff5235;
+	color: #ff2200;
 }
 
 #guide h4 {
@@ -115,6 +80,7 @@ body {
 	width: 100%;
 	display: flex;
 	align-items: center;
+	color: #222;
 }
 
 #guide div#button {
@@ -129,15 +95,15 @@ body {
 	width: 90px;
 	margin: 10px;
 	outline: none;
-	background: #ff5235;
-	color: #e7f1fa;
+	background: #ff2200;
+	color: #fff;
 	border-radius: 20px 8px;
 	border: 2px solid #b0c4d8;
 	cursor: pointer;
 }
 
 #guide div#button button:hover {
-	background: #e91e3a;
+	background: #ff0000;
 }
 
 /* quiz section */
