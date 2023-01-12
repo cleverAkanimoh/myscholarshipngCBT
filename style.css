@@ -34,6 +34,21 @@ primary: orange
 
 }
 
+@keyframes loading {
+    to {
+        rotate: 360deg;
+    }
+}
+
+.loading {
+    width: 30px;
+    height: 30px;
+    border: 2px solid transparent;
+    border-top-color: black;
+    border-radius: 50%;
+    animation: loading 0.5s infinite;
+}
+
 button,
 select,
 .logo {
@@ -41,7 +56,7 @@ select,
 }
 
 main {
-    width: 100vw;
+    width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -92,7 +107,7 @@ nav.nav-fixed {
     translate: 0 -100%;
     z-index: -200;
     text-transform: capitalize;
-    transition: all 0.3s linear;
+    transition: all 0.4s linear;
 }
 
 .alert-display {
@@ -101,7 +116,7 @@ nav.nav-fixed {
     padding: 0.7rem;
     background: #fff;
     color: #ff0000;
-    font: 500 0.9rem 'Poppins', sans-serif;
+    font: 500 0.89rem 'Poppins', sans-serif;
     border: 1px solid #ff0000;
     border-radius: 0.3rem;
     z-index: 200;
@@ -122,9 +137,11 @@ nav.nav-fixed {
 
 #container-article {
     width: 100%;
+    min-height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     padding: 3rem 1.5rem 5rem;
 }
 
@@ -249,11 +266,13 @@ textarea {
     position: relative;
     margin-top: 20px;
     margin-bottom: 30px;
+    display: grid;
+    place-items: center;
     height: 50px;
     width: 50px;
     border: 2px solid transparent;
     background: #ff2200;
-    border-radius: 50rem;
+    border-radius: 50%;
     color: #fff;
     font: 500 1.1rem 'Roboto', sans-serif;
     cursor: pointer;
@@ -325,7 +344,8 @@ footer ul li a:hover {
         width: 200px;
     }
 
-    #container-article #registration-form, #login-form {
+    #container-article #registration-form,
+    #login-form {
         padding: 1.5rem;
     }
 }
@@ -335,7 +355,7 @@ footer ul li a:hover {
         width: 550px;
     }
 
-    #container-article #registration-form{
+    #container-article #registration-form {
         grid-template-columns: repeat(2, 1fr);
         gap: 5px 15px;
     }
@@ -362,5 +382,14 @@ footer ul li a:hover {
     #container-article #registration-form {
         width: 600px;
         padding: 1.5rem;
+    }
+
+    #container-article h2 {
+        font-size: 2rem;
+    }
+
+    #container-article h4,
+    .label {
+        font-size: 1.1rem !important;
     }
 }

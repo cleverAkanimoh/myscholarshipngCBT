@@ -104,13 +104,16 @@ function testStart() {
     
     clearInterval(interval);
     articleContainer.innerHTML = loginFormHtml;
-    countdown.textContent = `the scholarship test registration ended on ${Weekdays[day]}, ${date} ${Months[month]} ${year}, ${hour}:${min}${min > 9 ? "" : "0"}`;
+    countdown.textContent = `the scholarship test registration ended on ${Weekdays[day]}, ${date} ${Months[month]} ${year}, ${hour}:${min > 9 ? "" : "0"}${min}`;
     const loginForm = document.getElementById('login-form');
     loginForm.onsubmit = loginHandleSubmit;
     holding.textContent = 'please enter your userID to start your test';
 }
 
-function loginHandleSubmit(e) {
+const loginHandleSubmit = async e => {
     e.preventDefault();
-    console.log('working well');
+    let loginBtn = document.querySelector(".loginBtn")
+    loginBtn.innerHTML = `<div class="loading"></div>`;
+
+    
 }
