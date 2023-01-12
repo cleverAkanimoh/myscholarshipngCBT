@@ -115,5 +115,9 @@ const loginHandleSubmit = async e => {
     let loginBtn = document.querySelector(".loginBtn")
     loginBtn.innerHTML = `<div class="loading"></div>`;
 
-    
+    setTimeout(() => {
+        fetch("./server/questions.js")
+        .then(res => res.json())
+        .then(res => console.log(res))
+    }, 5000)
 }
