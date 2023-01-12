@@ -127,7 +127,7 @@ function loginHandleSubmit(e) {
         fetch("./server/questions.json")
             .then(res => res.json())
             .then(data => quizSection(data))
-    }, 5000)
+    }, 2000)
 }
 
 function quizSection(data) {
@@ -189,12 +189,11 @@ function quizSection(data) {
 
     const resultHtml = `
     <div id="result">
-    <i class="fas fa-trophy"></i>
-    <h6>you have completed the quiz</h6>
-    <h6 id="points"></h6>
-    <button id="quit">quit</button>
-    <button id="startAgain">start again</button>
-</div>
+        <i class="fas fa-trophy"></i>
+        <h6><big>Congratulations!</big> you've successfully completed the scholarship test. Information about the test like your test result has been emailed to you</h6>
+        <h6 id="points"></h6>
+        <a href="https://myscholarship.ng" target="_blank">check out more about myscholarship.ng</a>
+    </div>
     `;
 
     // after authentication guide page will show
@@ -206,20 +205,96 @@ function quizSection(data) {
 
     // creating timer for quiz once continue is clicked
 
-    function countDown() {
-        
-    }
+
 
     continueBtn.onclick = () => {
         articleContainer.innerHTML = quizHtml;
+        let time = document.getElementById('time');
+        let next_question = document.getElementById('next_question');
+        let choice_que = document.querySelectorAll(".choice_que")
+        // question section
+        let questionNo = document.querySelector('#questionNo');
+        let questionText = document.querySelector('#questionText');
 
-        if (timer === 0) {
-            clearInterval(timeInterval);
-        } else {
-            timer--;
-        }
+        // multiple choices of questions
+        let option1 = document.querySelector('#option1');
+        let option2 = document.querySelector('#option2');
+        let option3 = document.querySelector('#option3');
+        let option4 = document.querySelector('#option4');
+
+
+        // correct and next Button
+        let total_correct = document.querySelector('#total_correct');
+
+        function loadData() {
+            questionNo.innerText = `${index + 1} `;
+            questionText.innerText = data[index].question;
+            option1.innerText = data[index].choice1;
+            option2.innerText = data[index].choice2;
+            option3.innerText = data[index].choice3;
+            option4.innerText = data[index].choice4;
         
+            // timer start
+            timer = 20;
+        };
+
+        function countDown() {
+            if (timer === 0) {
+                clearInterval(timeInterval);
+                moveToNextQuestion()
+            } else {
+                timer--;
+            }
+            time.innerText = timer;
+        }
+
+        choice_que.forEach((choices, choiceNo) => {
+            choices.onclick = () => {
+                choices.classList.add('active');
+        
+                // check answer
+                if (choiceNo === MCQs[index].answer){
+                    correct++;
+                }else {
+                    correct+=0
+                }
+                clearInterval(interval)
+        
+                // disable other options
+        
+                for(let i = 0; i<=3; i++) {
+                    choice_que[i].classList.add('disabled')
+                }
+            }
+        })
+
         timeInterval = setInterval(countDown, 1000);
-        console.log(timer);
+
+        next_question.onclick = moveToNextQuestion;
+
+        function moveToNextQuestion() {
+            console.log(index, choice_que, data.length);
+            if (index !== data.length - 1) {
+                index++;
+                choice_que.forEach(remActive => {
+                    remActive.classList.remove('active');
+                    remActive.classList.remove('disabled');
+                });
+                total_correct.innerHTML = `${correct} out of ${data.length} Questions`;
+            } else {
+                index = 0;
+                clearInterval(timeInterval);
+                articleContainer.innerHTML = resultHtml;
+                let points = document.getElementById('points');
+                points.innerHTML = `you got ${correct} out of ${data.length} Questions`;
+            }
+            // questions 
+            loadData();
+
+            // result
+            total_correct.style.visibility = 'visible';
+            clearInterval(timeInterval);
+            timeInterval = setInterval(countDown, 1000);
+        }
     }
 }

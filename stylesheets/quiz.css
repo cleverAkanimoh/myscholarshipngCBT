@@ -37,7 +37,7 @@ Variables
 	--clr-green-light: hsl(125, 71%, 66%);
 	--clr-black: #222;
 	--ff-primary: "Roboto", sans-serif;
-	--ff-secondary: "Open Sans", sans-serif;
+	--ff-secondary: "Poppins", sans-serif;
 	--transition: all 0.3s linear;
 	--spacing: 0.06rem;
 	--radius: 0.25rem;
@@ -55,10 +55,6 @@ Global Styles
 *,
 ::after,
 ::before {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	word-break: break-word;
 	letter-spacing: var(--spacing);
 }
 
@@ -244,12 +240,11 @@ h6:not(#time) {
 	height: 400px;
 	width: 300px;
 	text-align: center;
-	background: #e7f1fa;
-	border-radius: 30px 10px;
-	border: 1px solid #b0c4d8;
+	background: #f6fbff;
+	border-radius: 10px;
 	position: relative;
-	overflow: hidden;
-	display: none;
+	word-wrap: break-word;
+	padding: 0 1rem; 
 }
 
 #container #result i {
@@ -264,39 +259,36 @@ h6:not(#time) {
 
 #container #result h6 {
 	width: 100%;
-	margin-left: 0;
 	position: absolute;
-	top: 200px;
+	top: 180px;
 	text-align: center;
 	font-size: 1.1rem;
-}
-
-#container #result #points {
-	top: 245px;
-}
-
-#container #result button {
-	height: 45px;
-	width: 90%;
-	outline: none;
-	background: #ff5235;
-	color: #e7f1fa;
-	border-radius: 20px 8px;
-	border: 2px solid #b0c4d8;
-	cursor: pointer;
-	text-transform: capitalize;
-	position: absolute;
-	bottom: 70px;
 	left: 50%;
 	translate: -50%;
 }
 
-#container #result button:last-child {
-	bottom: 20px;
+#container #result #points {
+	top: 280px;
+	color: #000;
+	left: 50%;
+	translate: -50%;
 }
 
-#container #result button:hover {
-	background: #e91e3a;
+#container #result a:link, #container #result a:visited {
+	color: #ff2301ed;
+	font-size: 0.89rem;
+	letter-spacing: 0;
+	border-radius: 5px;
+	text-transform: capitalize;
+	position: absolute;
+	bottom: 20px;
+	left: 50%;
+	translate: -50%;
+	text-decoration: none;
+}
+
+#container #result a:hover {
+	color: #ff0000;
 }
 
 @media screen and (min-width: 450px) {
@@ -320,7 +312,7 @@ h6:not(#time) {
 	}
 
 	#container #result h6 {
-		font-size: 1.3rem !important;
+		font-size: 1.2rem !important;
 	}
 
 	body {
