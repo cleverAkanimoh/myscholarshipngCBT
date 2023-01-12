@@ -135,7 +135,7 @@ function quizSection(data) {
 
     let index = 0;
     let timer = 20;
-    let interval = 0;
+    let timeInterval = 0;
 
     // total points
     let correct = 0;
@@ -207,15 +207,19 @@ function quizSection(data) {
     // creating timer for quiz once continue is clicked
 
     function countDown() {
-        if (timer === 0) {
-            clearInterval(interval);
-        } else {
-            timer--;
-        }
+        
     }
 
     continueBtn.onclick = () => {
         articleContainer.innerHTML = quizHtml;
-        timer = 20;
+
+        if (timer === 0) {
+            clearInterval(timeInterval);
+        } else {
+            timer--;
+        }
+        
+        timeInterval = setInterval(countDown, 1000);
+        console.log(timer);
     }
 }
