@@ -101,7 +101,7 @@ function testStart() {
         <i class="bi bi-box-arrow-in-up-right"></i>
   </button>
     </form>`;
-    
+
     clearInterval(interval);
     articleContainer.innerHTML = loginFormHtml;
     countdown.textContent = `the scholarship test registration ended on ${Weekdays[day]}, ${date} ${Months[month]} ${year}, ${hour}:${min > 9 ? "" : "0"}${min}`;
@@ -110,14 +110,72 @@ function testStart() {
     holding.textContent = 'please enter your userID to start your test';
 }
 
-const loginHandleSubmit = async e => {
+function loginHandleSubmit(e) {
     e.preventDefault();
     let loginBtn = document.querySelector(".loginBtn")
     loginBtn.innerHTML = `<div class="loading"></div>`;
 
     setTimeout(() => {
-        fetch("./server/questions.js")
-        .then(res => res.json())
-        .then(res => console.log(res))
+        fetch("./server/questions.json")
+            .then(res => res.json())
+            .then(data => quizSection(data))
     }, 5000)
+}
+
+function quizSection(data) {
+    console.log(data);
+    const guideHtml = `
+    <div id="guide">
+        <h2>quiz guide</h2>
+        <h4>1. you have only 20 seconds for each questions.</h4>
+        <h4>2. once you select an option, it cannot be undone.</h4>
+        <h4>
+        3. you'll gain points on the basic of your correct answers
+        </h4>
+        <h4>4. you cannot exit from the quiz while you are playing</h4>
+        <div id="button">
+            <button id="exit">Exit</button>
+            <button id="continue">Continue</button>
+        </div>
+    </div>`;
+
+    const quizHtml = `
+    <div id="quiz">
+    <div id="quiz_header">
+        <h5>amazing quiz app</h5>
+        <div id="timer">
+            <h6>Time left</h6>
+            <h6 id="time">20</h6>
+        </div>
+    </div>
+    <div id="question">
+        <h3 id="questionNo"></h3>
+        <h3 id="questionText"></h3>
+    </div>
+    <!-- choices -->
+    <div id="optionList">
+        <h4 class="choice_que" id="option1"></h4>
+        <h4 class="choice_que" id="option2"></h4>
+        <h4 class="choice_que" id="option3"></h4>
+        <h4 class="choice_que" id="option4"></h4>
+    </div>
+    <!-- answers -->
+    <div id="answersSection">
+        <h3 id="total_correct"></h3>
+        <h3 id="next_question">Next</h3>
+    </div>
+</div>
+    `;
+
+    const resultHtml = `
+    <div id="result">
+    <i class="fas fa-trophy"></i>
+    <h6>you have completed the quiz</h6>
+    <h6 id="points"></h6>
+    <button id="quit">quit</button>
+    <button id="startAgain">start again</button>
+</div>
+    `;
+
+    articleContainer.innerHTML = guideHtml;
 }
