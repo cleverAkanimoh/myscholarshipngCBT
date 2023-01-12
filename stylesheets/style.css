@@ -176,7 +176,6 @@ nav.nav-fixed {
 
 small {
     display: inline-block;
-    margin-bottom: 20px;
 }
 
 #container-article #registration-form,
@@ -184,7 +183,7 @@ small {
     position: relative;
     width: 90%;
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(1, 100%);
     background: white;
     padding: 1rem 0.5rem;
     border-radius: 0.3rem;
@@ -236,7 +235,7 @@ small {
 #container-article #registration-form input,
 #container-article #registration-form select,
 #login-form input {
-    flex: 1;
+    flex: 0.5;
     height: inherit;
     padding: 0 0.5rem;
     font-size: 0.99rem;
@@ -358,7 +357,7 @@ footer ul li a:hover {
     }
 
     #container-article #registration-form {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, 48%);
         gap: 5px 15px;
     }
 

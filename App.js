@@ -30,12 +30,12 @@ window.addEventListener('DOMContentLoaded', modulesLoad, false);
 
 function NationalityDrop() {
     let countrySelect = document.getElementById('country');
-    let optionsEl = document.createElement('option');
     Countries.forEach(country => {
+        let optionsEl = document.createElement('option');
         optionsEl.value = `${country.name}`;
-        optionsEl.textContent = `${country.name}`;
+        optionsEl.innerHTML = `${country.name}`;
+        countrySelect.appendChild(optionsEl)
     });
-    countrySelect.appendChild(optionsEl)
 }
 
 // countdown
