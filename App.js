@@ -131,7 +131,18 @@ function loginHandleSubmit(e) {
 }
 
 function quizSection(data) {
-    console.log(data);
+    // console.log(data);
+
+    let index = 0;
+    let timer = 20;
+    let interval = 0;
+
+    // total points
+    let correct = 0;
+
+    // store answer value
+    let UserAns = undefined;
+
     const guideHtml = `
     <div id="guide">
         <h2>quiz guide</h2>
@@ -154,19 +165,19 @@ function quizSection(data) {
         <h5></h5>
         <div id="timer">
             <h6>Time left</h6>
-            <h6 id="time">20</h6>
+            <h6 id="time">${timer}</h6>
         </div>
     </div>
     <div id="question">
-        <h3 id="questionNo"></h3>
-        <h3 id="questionText"></h3>
+        <h3 id="questionNo">${index + 1}</h3>
+        <h3 id="questionText">${data[index].question}</h3>
     </div>
     <!-- choices -->
     <div id="optionList">
-        <h4 class="choice_que" id="option1"></h4>
-        <h4 class="choice_que" id="option2"></h4>
-        <h4 class="choice_que" id="option3"></h4>
-        <h4 class="choice_que" id="option4"></h4>
+        <h4 class="choice_que" id="option1">${data[index].choice1}</h4>
+        <h4 class="choice_que" id="option2">${data[index].choice2}</h4>
+        <h4 class="choice_que" id="option3">${data[index].choice3}</h4>
+        <h4 class="choice_que" id="option4">${data[index].choice4}</h4>
     </div>
     <!-- answers -->
     <div id="answersSection">
@@ -191,10 +202,20 @@ function quizSection(data) {
     articleContainer.innerHTML = guideHtml;
     let continueBtn = document.getElementById("continue")
     let exitBtn = document.getElementById("exit")
-    console.log(continueBtn, exitBtn);
     exitBtn.onclick = () => window.location.reload()
+
+    // creating timer for quiz once continue is clicked
+
+    function countDown() {
+        if (timer === 0) {
+            clearInterval(interval);
+        } else {
+            timer--;
+        }
+    }
 
     continueBtn.onclick = () => {
         articleContainer.innerHTML = quizHtml;
+        timer = 20;
     }
 }
