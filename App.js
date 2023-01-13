@@ -4,7 +4,6 @@ import Months from "./Components/Months.js";
 // import NavFixed from "./modules/NavFixed.js";
 import HandleSubmit from "./Components/HandleSubmit.js";
 import WordCount from "./Components/WordCount.js";
-import CreateUserID from "./Components/CreateUserID.js";
 import displayAlert from "./Components/DisplayAlert.js";
 
 const logos = document.querySelectorAll('.logo');
@@ -26,6 +25,17 @@ function modulesLoad() {
     NationalityDrop()
 }
 window.addEventListener('DOMContentLoaded', modulesLoad, false);
+
+// create userID
+
+function CreateUserID(){
+    let uniqueNumber = Date.now()
+    let randomNumber = Math.floor(Math.random() * 10)
+    if (firstName.value === ""){
+        userID.value = '';
+    }
+    userID.value = `${firstName.value}${randomNumber}${uniqueNumber}`
+}
 
 // nationality
 
