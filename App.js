@@ -9,6 +9,7 @@ import displayAlert from "./modules/DisplayAlert.js";
 
 const logos = document.querySelectorAll('.logo');
 const textarea = document.getElementById('essay');
+const holding = document.getElementById('holding');
 const registrationForm = document.getElementById('registration-form');
 const articleContainer = document.getElementById('container-article');
 
@@ -40,7 +41,7 @@ function NationalityDrop() {
 
 // countdown
 
-let d = new Date(2023, 0, 13, 10, 0);
+let d = new Date(2023, 0, 14, 10, 0);
 const year = d.getFullYear();
 const month = d.getMonth();
 const day = d.getDay();
@@ -86,7 +87,7 @@ function testStart() {
     const loginFormHtml = `
                 <!-- login form -->
     <h2>welcome to our <span>CBT</span> platform</h2>
-    <h4 id="holding"></h4>
+    <h4 id="holding">please enter your userID to start your test</h4>
 
     <form action="#" id="login-form">
     <div class="form-div" class="span-two">
@@ -108,7 +109,6 @@ function testStart() {
     countdown.textContent = `the scholarship test registration ended on ${Weekdays[day]}, ${date} ${Months[month]} ${year}, ${hour}:${min > 9 ? "" : "0"}${min}`;
     const loginForm = document.getElementById('login-form');
     loginForm.onsubmit = loginHandleSubmit;
-    holding.textContent = 'please enter your userID to start your test';
 }
 
 function loginHandleSubmit(e) {

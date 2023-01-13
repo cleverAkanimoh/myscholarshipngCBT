@@ -13,23 +13,23 @@ primary: orange
 
 @keyframes changeBg {
     0% {
-        background: url(./images/3-students-on-campus.jpg) center/cover no-repeat;
+        background: url('/images/3-students-on-campus.jpg') center/cover no-repeat;
     }
 
     25% {
-        background: url(./images/Foreign-Students.jpg) center/cover no-repeat;
+        background: url('/images/Foreign-Students.jpg') center/cover no-repeat;
     }
 
     50% {
-        background: url(./images/education.jpeg) center/cover no-repeat;
+        background: url('/images/education.jpeg') center/cover no-repeat;
     }
 
     75% {
-        background: url(./images/school-sketch.jpeg) center/cover no-repeat;
+        background: url('/images/school-sketch.jpeg') center/cover no-repeat;
     }
 
     100% {
-        background: url(./images/cbtshutterstock.jpeg) center/cover no-repeat;
+        background: url('/images/cbtshutterstock.jpeg') center/cover no-repeat;
     }
 
 }
@@ -162,6 +162,7 @@ nav.nav-fixed {
     margin-bottom: 20px;
     text-align: center;
     text-transform: capitalize;
+    line-height: 1.5;
 }
 
 #container-article h4 {
@@ -174,14 +175,17 @@ nav.nav-fixed {
     color: #ff9100;
 }
 
-small {
+#partake {
     display: inline-block;
+    text-align: center;
+    line-height: 1.5;
+    margin-bottom: 25px;
 }
 
 #container-article #registration-form,
 #login-form {
     position: relative;
-    width: 90%;
+    width: 96%;
     display: grid;
     grid-template-columns: repeat(1, 100%);
     background: white;
@@ -361,6 +365,10 @@ footer ul li a:hover {
         gap: 5px 15px;
     }
 
+    #container-article h2, #container-article #partake {
+        max-width: 500px;
+    }
+
     #login-form {
         width: 500px;
     }
@@ -371,7 +379,7 @@ footer ul li a:hover {
 
     #form-wrapper {
         animation: changeBg 5s infinite;
-        padding: 5rem 0;
+        padding: 3rem 0;
     }
 }
 
