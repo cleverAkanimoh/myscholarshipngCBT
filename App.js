@@ -1,11 +1,11 @@
-import Countries from "./modules/Countries.js";
-import Weekdays from "./modules/Weekdays.js";
-import Months from "./modules/Months.js";
+import Countries from "./Components/Countries.js";
+import Weekdays from "./Components/Weekdays.js";
+import Months from "./Components/Months.js";
 // import NavFixed from "./modules/NavFixed.js";
-import HandleSubmit from "./modules/HandleSubmit.js";
-import WordCount from "./modules/WordCount.js";
-import CreateUserID from "./modules/CreateUserID.js";
-import displayAlert from "./modules/DisplayAlert.js";
+import HandleSubmit from "./Components/HandleSubmit.js";
+import WordCount from "./Components/WordCount.js";
+import CreateUserID from "./Components/CreateUserID.js";
+import displayAlert from "./Components/DisplayAlert.js";
 
 const logos = document.querySelectorAll('.logo');
 const textarea = document.getElementById('essay');
