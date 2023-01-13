@@ -284,6 +284,10 @@ textarea {
     transition: all 0.5s;
 }
 
+#login-form button {
+    margin: 1.7rem 0 0;
+}
+
 #container-article #registration-form button:hover,
 #login-form button:hover {
     border-color: #ff2200;

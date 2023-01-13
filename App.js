@@ -41,7 +41,7 @@ function NationalityDrop() {
 
 // countdown
 
-let d = new Date(2023, 0, 14, 10, 0);
+let d = new Date(2023, 0, 13, 10, 0);
 const year = d.getFullYear();
 const month = d.getMonth();
 const day = d.getDay();
@@ -86,8 +86,8 @@ function getRemainingTime() {
 function testStart() {
     const loginFormHtml = `
                 <!-- login form -->
-    <h2>welcome to our <span>CBT</span> platform</h2>
-    <h4 id="holding">please enter your userID to start your test</h4>
+    <h2>welcome to <span>myScholarshipNG CBT</span> platform</h2>
+    <h4 id="holding">kindly enter your userID to start your test</h4>
 
     <form action="#" id="login-form">
     <div class="form-div" class="span-two">
@@ -141,7 +141,6 @@ function quizSection(data) {
     let correct = 0;
 
     // store answer value
-    let UserAns = undefined;
 
     const guideHtml = `
     <div id="guide">
