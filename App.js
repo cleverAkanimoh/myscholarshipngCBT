@@ -28,10 +28,10 @@ window.addEventListener('DOMContentLoaded', modulesLoad, false);
 
 // create userID
 
-function CreateUserID(){
+function CreateUserID() {
     let uniqueNumber = Date.now()
     let randomNumber = Math.floor(Math.random() * 10)
-    if (firstName.value === ""){
+    if (firstName.value === "") {
         userID.value = '';
     }
     userID.value = `${firstName.value}${randomNumber}${uniqueNumber}`
@@ -242,7 +242,7 @@ function quizSection(data) {
             option2.innerText = data[index].choice2;
             option3.innerText = data[index].choice3;
             option4.innerText = data[index].choice4;
-        
+
             // timer start
             timer = 20;
         };
@@ -260,18 +260,18 @@ function quizSection(data) {
         choice_que.forEach((choices, choiceNo) => {
             choices.onclick = () => {
                 choices.classList.add('active');
-        
+
                 // check answer
-                if (choiceNo === data[index].answer){
+                if (choiceNo === data[index].answer) {
                     correct++;
-                }else {
+                } else {
                     correct += 0
                 }
                 clearInterval(timeInterval)
-        
+
                 // disable other options
-        
-                for(let i = 0; i<=3; i++) {
+
+                for (let i = 0; i <= 3; i++) {
                     choice_que[i].classList.add('disabled')
                 }
             }
@@ -288,7 +288,7 @@ function quizSection(data) {
                     remActive.classList.remove('active');
                     remActive.classList.remove('disabled');
                 });
-                total_correct.innerHTML = `${correct} out of ${data.length} Questions`;
+                total_correct.innerHTML = `${data.length - index} out of ${data.length} Questions left`;
             } else {
                 index = 0;
                 clearInterval(timeInterval);
