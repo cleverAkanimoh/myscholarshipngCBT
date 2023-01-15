@@ -100,7 +100,7 @@ function testStart() {
     <h4 id="holding">kindly enter your userID to start your test</h4>
 
     <form action="#" id="login-form">
-    <div class="form-div" class="span-two">
+    <div class="form-div">
     <label for="userID" class="label">userID</label>
     <aside id="userID-aside">
         <i class="bi bi-person-vcard"></i>
@@ -108,7 +108,7 @@ function testStart() {
     </aside>
     </div>
 
-    <button class="loginBtn span-two">
+    <button class="loginBtn">
         <i class="bi bi-box-arrow-in-up-right"></i>
   </button>
     </form>`;

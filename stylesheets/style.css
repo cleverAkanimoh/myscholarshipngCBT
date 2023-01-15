@@ -120,8 +120,8 @@ nav.nav-fixed {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 3rem 1.5rem 5rem;
-    margin-top: 60px;
+    padding: 1rem 0.4rem 4rem;
+    margin-top: 60px !important;
 }
 
 
@@ -159,8 +159,7 @@ nav.nav-fixed {
     margin-bottom: 25px;
 }
 
-#container-article #registration-form,
-#login-form {
+#container-article #registration-form {
     position: relative;
     width: 96%;
     display: grid;
@@ -172,14 +171,24 @@ nav.nav-fixed {
 }
 
 #login-form {
-    margin-top: 20px;
-    display: flex;
+    margin-top: 15px;
+    width: 96%;
+    display: flex !important;
     gap: 15px;
+    background: white;
+    padding: 1rem 0.5rem;
+    border-radius: 0.3rem;
+    box-shadow: 3px -3px 2px #00000043, -3px 3px 2px #00000043;
 }
 
-#container-article #registration-form .form-div,
-#login-form .form-div {
+#container-article #registration-form .form-div {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#login-form .form-div {
+    width: 75%;
     display: flex;
     flex-direction: column;
 }
