@@ -155,12 +155,11 @@ function quizSection(data) {
     const guideHtml = `
     <div id="guide">
         <h2>quiz guide</h2>
-        <h4>1. you have only 20 seconds for each questions.</h4>
-        <h4>2. once you select an option, it cannot be undone.</h4>
-        <h4>
-        3. you'll gain points on the basic of your correct answers
-        </h4>
-        <h4>4. you cannot exit from the quiz while you are playing</h4>
+        <h4>Answer all questions</h4>
+        <h4>Each question carries equal marks</h4>
+        <h4>time allowed is 40minutes</h4>
+        <h4>number of questions: 50</h4>
+        <h4>read all questions carefully</h4>
         <div id="button">
             <button id="exit">Exit</button>
             <button id="continue">Continue</button>
@@ -169,26 +168,27 @@ function quizSection(data) {
     `;
 
     const quizHtml = `
-    <div id="quiz">
-    <div id="quiz_header">
-        <h5></h5>
-        <div id="timer">
-            <h6>Time left</h6>
-            <h6 id="time">${timer}</h6>
+        <div id="quiz">
+            <div id="quiz_header">
+            <h5></h5>
+            <div id="timer">
+                <h6>Time left</h6>
+                <h6 id="time">${timer}</h6>
+            </div>
+            </div>
         </div>
-    </div>
-    <div id="question">
+        <div id="question">
         <h3 id="questionNo">${index + 1}</h3>
         <h3 id="questionText">${data[index].question}</h3>
-    </div>
-    <!-- choices -->
-    <div id="optionList">
+        </div>
+        <!-- choices -->
+        <div id="optionList">
         <h4 class="choice_que" id="option1">${data[index].choice1}</h4>
         <h4 class="choice_que" id="option2">${data[index].choice2}</h4>
         <h4 class="choice_que" id="option3">${data[index].choice3}</h4>
         <h4 class="choice_que" id="option4">${data[index].choice4}</h4>
-    </div>
-    <!-- answers -->
+        </div>
+        <!-- answers -->
     <div id="answersSection">
         <h3 id="total_correct"></h3>
         <h3 id="next_question">Next</h3>
