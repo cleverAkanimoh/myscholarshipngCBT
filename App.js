@@ -51,7 +51,7 @@ function NationalityDrop() {
 
 // countdown
 
-let d = new Date(2023, 0, 13, 21, 0);
+let d = new Date(2023, 0, 26, 21, 0);
 const year = d.getFullYear();
 const month = d.getMonth();
 const day = d.getDay();
