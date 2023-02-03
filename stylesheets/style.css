@@ -54,12 +54,6 @@ nav {
     z-index: 200;
 }
 
-nav.nav-fixed {
-    position: fixed;
-    top: 0;
-    box-shadow: inset 0px 3px #17171743, 0px 3px #0606062b;
-}
-
 #welcome-header {
     display: none;
 }

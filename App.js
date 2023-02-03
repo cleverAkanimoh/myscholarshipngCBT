@@ -59,7 +59,7 @@ const date = d.getDate();
 const hour = d.getHours();
 const min = d.getMinutes();
 
-holding.textContent = `the scholarship test will hold on ${Weekdays[day]}, ${date} ${Months[month]} ${year}, ${hour > 9 ? "" : "0"}${hour}:${min > 9 ? "" : "0"}${min}`;
+holding.textContent = `the scholarship test will hold on ${Weekdays[day]}, ${date}th ${Months[month]} ${year}, ${hour > 9 ? "" : "0"}${hour}:${min > 9 ? "" : "0"}${min}`;
 
 // future time in milliseconds
 
